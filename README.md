@@ -1,3 +1,5 @@
 # dragdrop
 
-See: https://khatzpetalio.wordpress.com/2014/04/03/drag-and-drop-autosave-database/
+This is a simple drag and drop function using jquery. 
+
+See: https://mycodesnippet.com/drag-and-drop-autosave-database/
