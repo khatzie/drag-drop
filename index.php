@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Drag and Drop</title>
-<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+<!-- <link rel="stylesheet" href="../bootstrap/css/bootstrap.css"> -->
 <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
 </head>
@@ -80,15 +80,12 @@ $sql = "SELECT * FROM tbl_dragdrop ORDER BY position ASC";
             <?php
             $select = $mysqli->query($sql);
             while($row = $select->fetch_assoc()){
-                echo '<li id="recordsArray_'.$row['id'].'"><div class="dragdrop"><strong>'.$row['title'].'</strong></div></li>';
+                echo '<li id="recordsArray_'.$row['id'].'"><div class="dragdrop"><strong><span role="textbox" contenteditable>'.$row['title'].'</span></strong></div></li>';
             }
             
             ?>
         </ul>
     </div>
-     <a class="btn btn-primary btn-large" href="../downloads.php?path=archive/&download=drag-drop.rar">
-    	Download drag-drop.rar
-    </a>
     <hr>
     <div>
     	<p>A drag and drop UI used JQUERY UI, PHP, and MySQL Database. This simple program autosave the position of the item once you drag it in a certain position. This is not my own code I just made some sort of modification need in my project. This drag and drop works in <em><strong>IE</strong></em>, <em><strong>Chrome</strong></em>, and <em><strong>Mozilla</strong></em> but the auto save function doesn't work in <em><strong>IE</strong></em>. For the database table it only needs three(3) important fields <em><strong>id</strong></em>, <em><strong>title</strong></em>, and <em><strong>position</strong></em>.</p>
